@@ -1,12 +1,12 @@
 <template>
     <div class="d-flex justify-content-center align-items-center my-5 py-5">
         <table class="table w-50 border-2 shadow">
-            <tr>
+            <tr class="border-b-2">
                 <th>
                     Model id
                 </th>
-                <th>
-                    Model name
+                <th v-for="manufacturer in manufacturers">
+                    {{ manufacturer.name }}
                 </th>
                 <th>
                     Delete
@@ -15,12 +15,14 @@
                     Edit
                 </th>
             </tr>
-            <tr v-for="model in models.data">
+            <tr v-for="model in models.data" class="border-b-2">
                 <td class="d-flex justify-content-center mt-2">
                     {{ model.id }}
                 </td>
-                <td>
-                    {{ model.name }}
+                <td v-for="manufacturer in manufacturers">
+                    <span v-if="model.manufacturer_id===manufacturer.id" class="d-flex justify-content-center align-items-center">
+                        {{ model.name }}
+                    </span>
                 </td>
                 <td>
                     <Link :href="route('models.destroy', model.id)" method="DELETE"
@@ -48,10 +50,13 @@ export default {
     name: "Index",
     props: {
         models: Array,
-    }
+        manufacturers: Array,
+    },
 }
 </script>
 
 <style scoped>
-
+.table > :not(caption) > * > * {
+    border-bottom-width: 0;
+}
 </style>

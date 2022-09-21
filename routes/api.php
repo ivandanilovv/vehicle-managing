@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\API\ManufacturerApiController;
+use App\Http\Controllers\API\ModelApiController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -20,3 +21,4 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 });
 
 Route::apiResource('manufacturers', ManufacturerApiController::class)->only('index');
+Route::apiResource('models', ModelApiController::class)->only('index');

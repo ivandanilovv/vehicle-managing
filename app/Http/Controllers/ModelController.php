@@ -18,8 +18,9 @@ class ModelController extends Controller
 {
     public function index(): Response
     {
+        $manufacturers = Manufacturer::all();
         $models = Model::query()->paginate(10);
-        return Inertia::render('Models/Index', compact('models'));
+        return Inertia::render('Models/Index', compact('models', 'manufacturers'));
     }
 
     public function show(Model $model): Response
