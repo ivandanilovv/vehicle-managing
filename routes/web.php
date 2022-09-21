@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\ManufacturerController;
+use App\Http\Controllers\ModelController;
 use Illuminate\Foundation\Application;
 use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
@@ -36,3 +37,4 @@ Route::middleware([
 });
 
 Route::resource('manufacturers', ManufacturerController::class);
+Route::resource('models', ModelController::class);
