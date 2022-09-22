@@ -7,6 +7,13 @@ use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Database\Eloquent\Relations\HasOneThrough;
 
+/**
+ * @property mixed $image_src
+ * @property mixed $number
+ * @property mixed $title
+ * @property mixed $description
+ * @property mixed $model_id
+ */
 class Vehicle extends Model
 {
     use HasFactory;

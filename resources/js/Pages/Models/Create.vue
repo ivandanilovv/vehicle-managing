@@ -13,8 +13,8 @@
             <button type="submit" class="btn bg-success text-white ms-4 mt-3">
                 Submit
             </button>
-            <a href="http://127.0.0.1:8000/models" class="btn btn-danger text-white ms-3 mt-3">
-                Cancel
+            <a onclick="history.back();return false;" class="btn btn-danger text-white ms-3 mt-3">
+                Back
             </a>
         </form>
     </div>

@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\ManufacturerController;
 use App\Http\Controllers\ModelController;
+use App\Http\Controllers\VehicleController;
 use Illuminate\Foundation\Application;
 use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
@@ -38,3 +39,4 @@ Route::middleware([
 
 Route::resource('manufacturers', ManufacturerController::class);
 Route::resource('models', ModelController::class);
+Route::resource('vehicles', VehicleController::class);

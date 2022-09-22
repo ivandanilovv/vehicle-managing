@@ -6,8 +6,8 @@
                 Submit
             </button>
         </form>
-        <a href="http://127.0.0.1:8000/manufacturers" class="btn btn-danger text-white ms-3">
-            Cancel
+        <a onclick="history.back();return false;" class="btn btn-danger text-white ms-3">
+            Back
         </a>
     </div>
 </template>

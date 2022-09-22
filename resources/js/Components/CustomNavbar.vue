@@ -18,7 +18,7 @@
                             <a class="nav-link text-success" href="http://127.0.0.1:8000/models">Models</a>
                         </li>
                         <li class="nav-item fs-4 text-primary ms-3">
-                            <a class="nav-link text-success" href="#">Vehicles</a>
+                            <a class="nav-link text-success" href="http://127.0.0.1:8000/vehicles">Vehicles</a>
                         </li>
                     </ul>
                 </div>
