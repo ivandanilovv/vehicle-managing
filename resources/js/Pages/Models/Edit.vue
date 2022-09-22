@@ -6,9 +6,12 @@
             </label><br/>
             <input type="text" id="name" v-model="form.name">
             <br/><br/>
-            <button type="submit" class="btn bg-primary text-white ms-5">
+            <button type="submit" class="btn bg-primary text-white ms-4">
                 Submit
             </button>
+            <a href="http://127.0.0.1:8000/models" class="btn btn-danger text-white ms-3">
+                Cancel
+            </a>
         </form>
     </div>
 </template>
